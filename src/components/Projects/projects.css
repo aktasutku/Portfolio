@@ -1,0 +1,121 @@
+.ProjectsContainer {
+  width: 100%;
+  height: max-content;
+  padding: 30px 10px 70px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(200, 200, 200, 0.6);
+  transition: all 1s;
+}
+
+.ProjectsContainer h1 {
+  margin-bottom: 20px;
+}
+
+.Projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.ProjectContainer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.Project_Wrapper {
+  width: 550px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 12px;
+  padding: 0 5px;
+  gap: 10px;
+  -webkit-box-shadow: 1px 8px 17px 1px rgba(0, 0, 0, 0.85);
+  box-shadow: 1px 8px 17px 1px rgba(0, 0, 0, 0.85);
+  transition: box-shadow 0.5s ease-in-out;
+}
+.Project_Wrapper:hover {
+  -webkit-box-shadow: 16px 21px 17px 1px rgba(0, 0, 0, 0.85);
+  box-shadow: 16px 21px 17px 1px rgba(0, 0, 0, 0.85);
+}
+.Project_Wrapper p {
+  position: relative;
+  font-size: 1.8rem;
+}
+
+.Project_Wrapper p:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+.Project_Wrapper p:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+
+.Project_Img {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.Project_Eplain {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: max-content;
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  opacity: 0;
+  z-index: 1;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 1s ease;
+}
+.ProjectContainer:hover .Project_Eplain {
+  opacity: 1;
+}
+.Project_Eplain h3 {
+  margin-bottom: 10px;
+}
+
+.Project_Eplain p {
+  float: left;
+}
+
+@media only screen and (max-width: 700px) {
+  .Project_Wrapper {
+    width: 350px;
+    height: 250px;
+  }
+
+  .Project_Img {
+    height: max-content;
+  }
+}
