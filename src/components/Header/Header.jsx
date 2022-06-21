@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./header.scss";
+import profile from "../../images/utku.jpg"
 
 const Header = () => {
 
@@ -7,7 +8,7 @@ const Header = () => {
     <div className="Header_Container">
       <div className="Profile_Content">
         <div className="Profile_Img_Container">
-          <img src="../../public/images/utku.jpg" />
+          <img src={profile}/>
         </div>
         <div className="Profile_Name">
           <h1>Utku Aktas</h1>
