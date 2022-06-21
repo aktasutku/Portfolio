@@ -7,7 +7,7 @@ const Header = () => {
     <div className="Header_Container">
       <div className="Profile_Content">
         <div className="Profile_Img_Container">
-          <img src="images/utku.jpg" />
+          <img src="../../public/images/utku.jpg" />
         </div>
         <div className="Profile_Name">
           <h1>Utku Aktas</h1>
