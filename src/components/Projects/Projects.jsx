@@ -1,4 +1,8 @@
 import "./projects.css";
+import disney from "../../images/disney.png"
+import FoodOrder from "../../images/FoodOrder.png"
+import Ecommerce from "../../images/Ecommerce1.png"
+import Admin from "../../images/admin.png"
 
 const Projects = () => {
   return (
@@ -9,7 +13,7 @@ const Projects = () => {
         <div className="ProjectContainer">
           <div className="Project_Wrapper">
             <a href="https://disneyplus-utku.web.app/">
-              <img src="/images/disney.png" className="Project_Img" />
+              <img src={disney} className="Project_Img" />
             </a>
             <p>Disney+ Clone</p>
           </div>
@@ -27,7 +31,7 @@ const Projects = () => {
         <div className="ProjectContainer">
           <div className="Project_Wrapper">
             <a href="https://github.com/aktasutku/Food-Order">
-              <img src="/images/FoodOrder.png" className="Project_Img" />
+              <img src={FoodOrder} className="Project_Img" />
             </a>
             <p>Food Order</p>
           </div>
@@ -44,7 +48,7 @@ const Projects = () => {
         <div className="ProjectContainer">
           <div className="Project_Wrapper">
             <a href="https://github.com/aktasutku/Ecommerce">
-              <img src="/images/Ecommerce1.png" className="Project_Img" />
+              <img src={Ecommerce} className="Project_Img" />
             </a>
             <p>E-commerce</p>
           </div>
@@ -60,7 +64,7 @@ const Projects = () => {
         <div className="ProjectContainer">
           <div className="Project_Wrapper">
             <a href="https://github.com/aktasutku/AdminPage">
-              <img src="/images/admin.png" className="Project_Img" />
+              <img src={Admin} className="Project_Img" />
             </a>
             <p>Admin Page</p>
           </div>
