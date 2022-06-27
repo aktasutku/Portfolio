@@ -1,0 +1,101 @@
+.skills_container {
+  margin-top: 70px;
+  transition: margin-top 1s;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills_wrapper {
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+}
+
+.skill_separator {
+  width: 5px;
+  height: 5px;
+  margin: 0px 2px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.skills_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills_list_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.5rem;
+}
+
+.skills_list_item:hover {
+  border-radius: 12px;
+  -webkit-box-shadow: -5px 0px 11px 2px #000000;
+  box-shadow: -5px 0px 11px 2px #000000;
+}
+
+.skills_list_item img {
+  width: 40px;
+}
+.textimg {
+  width: 60px;
+}
+
+.skills_list_item span {
+  pointer-events: none;
+}
+
+.React_Icon {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+  .skills_list {
+    gap: 0px;
+  }
+
+  .skills_container {
+    margin-top: 200px;
+  }
+
+  .skills_list_item {
+    margin-top: 50px;
+  }
+  .skills_list_item span {
+    font-size: 16px;
+  }
+
+  .skill_separator {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .skills_list {
+    padding: 0px;
+  }
+
+  .skills_list_item {
+    margin: 3px;
+  }
+
+  .React_Icon {
+    font-size: 10px;
+  }
+}

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./header.scss";
+import React from "react";
+import "./header.css";
 import profile from "../../images/utku.jpg"
 
 const Header = () => {
