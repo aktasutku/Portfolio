@@ -19,6 +19,7 @@
   align-items: center;
   width: max-content;
 }
+
 .Profile_Content ul {
   display: flex;
   gap: 5px;
@@ -45,6 +46,7 @@
   cursor: pointer;
   transition: transform 0.4s ease;
 }
+
 .Profile_Img_Container img:hover {
   transform: scale(1.2);
 }
@@ -96,12 +98,13 @@
 .header_list li:hover {
   cursor: pointer;
 }
+
 .header_list li:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-@media only screen and(max-width:700px) {
+@media only screen and (max-width: 700px) {
   .Header_Container {
     height: 200px;
     flex-direction: column;
@@ -115,8 +118,7 @@
     text-align: center;
   }
 
-  .Profile_Img_Container,
-  .Profile_Name {
+  .Profile_Img_Container .Profile_Name {
     left: 0;
     margin-left: 0;
   }
