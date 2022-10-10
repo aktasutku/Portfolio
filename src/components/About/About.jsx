@@ -1,37 +1,31 @@
 import React from "react";
 import "./about.css";
-import { db } from "../../firebase";
-import { collection, getDocs } from "firebase/firestore";
+// import { db } from "../../firebase";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { useState } from "react";
 import { useEffect } from "react";
 
 const About = () => {
+  const db = getFirestore();
   const [paragraph, setParagraph] = useState([]);
-  const aboutMeRef = collection(db,"aboutMe");
+  const aboutMeRef = doc(db, "aboutMe", "paragraph");
 
   useEffect(() => {
     const getAboutMe = async () => {
-      const data = await getDocs(aboutMeRef);
-      setParagraph(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      const docSnap = await getDoc(aboutMeRef);
+      setParagraph(docSnap.data());
     };
-
     getAboutMe();
   }, []);
 
   return (
     <div className="AboutContainer" id="About">
-      <div className="text">
+      <div className="AboutContainer__text">
         <h1>Hi There ,</h1>
-        {paragraph.map((p) => {
-          return (
-            <>
-              <p>{p.p1}</p>
-              <p>{p.p2}</p>
-              <p>{p.p3}</p>
-              <p>{p.p4}</p>
-            </>
-          );
-        })}
+        <p>{paragraph.p1}</p>
+        <p>{paragraph.p2}</p>
+        <p>{paragraph.p3}</p>
+        <p>{paragraph.p4}</p>
       </div>
     </div>
   );

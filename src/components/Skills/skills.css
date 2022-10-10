@@ -1,5 +1,5 @@
 .skills_container {
-  margin-top: 70px;
+  margin-top: var(--header-height_fullscreen);
   transition: margin-top 1s;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
@@ -9,11 +9,32 @@
   align-items: center;
   justify-content: center;
 }
-
-.skills_wrapper {
-  width: 90%;
-  height: 100%;
+ul {
+  width: 95%;
+  height: max-content;
   padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+ul img {
+  width: 60px;
+}
+.React_Icon {
+  font-size: 30px;
 }
 
 .skill_separator {
@@ -24,78 +45,26 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.skills_list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.skills_list_item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  gap: 10px;
-  padding: 5px;
-  transition: all 0.3s ease-in-out;
-  font-size: 1.5rem;
-}
-
-.skills_list_item:hover {
-  border-radius: 12px;
-  -webkit-box-shadow: -5px 0px 11px 2px #000000;
-  box-shadow: -5px 0px 11px 2px #000000;
-}
-
-.skills_list_item img {
-  width: 40px;
-}
-.textimg {
-  width: 60px;
-}
-
-.skills_list_item span {
+span {
   pointer-events: none;
 }
-
+ul > li,
 .React_Icon {
-  font-size: 30px;
+  animation: bounce;
+  animation-duration: 2s;
 }
 
 @media only screen and (max-width: 700px) {
-  .skills_list {
-    gap: 0px;
+  ul img {
+    width: 50px;
   }
-
+  .React_Icon {
+    font-size: 30px;
+  }
   .skills_container {
-    margin-top: 200px;
-  }
-
-  .skills_list_item {
-    margin-top: 50px;
-  }
-  .skills_list_item span {
-    font-size: 16px;
-  }
-
-  .skill_separator {
-    display: none;
+    margin-top: var(--header-height-fullscreen);
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .skills_list {
-    padding: 0px;
-  }
-
-  .skills_list_item {
-    margin: 3px;
-  }
-
-  .React_Icon {
-    font-size: 10px;
-  }
 }

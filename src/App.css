@@ -1,7 +1,11 @@
-:root{
-    /* HEADER */
-    --header-height_fullscreen:70px;
-    --header-height_phonescreen:200px;
-    --header-height-fullscreen:200px;
-    --skills-top-phonescreen:70px;
-  }
+:root {
+  /* HEADER */
+  --header-height_fullscreen: 70px;
+  --header-height_phonescreen: 200px;
+  --header-height-fullscreen: 200px;
+  --skills-top-phonescreen: 70px;
+}
+
+* {
+  scroll-behavior: smooth;
+}

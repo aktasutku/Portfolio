@@ -4,32 +4,24 @@
   left: 0;
   right: 0;
   width: 100%;
-  height: 70px;
+  padding: 10px;
+  height: var(--header-height_fullscreen);
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
-  transition: height 1s;
+  justify-content: space-between;
+  transition: height 0.5s ease-in-out;
   z-index: 999;
 }
 
 .Profile_Content {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: max-content;
 }
 
-.Profile_Content ul {
-  display: flex;
-  gap: 5px;
-  left: 10px;
-  width: max-content;
-  margin-left: 20px;
-}
-
 .Profile_Img_Container {
-  position: relative;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -37,13 +29,12 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  left: 10px;
 }
 
 .Profile_Img_Container img {
   border-radius: 50%;
-  width: 60px;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
   transition: transform 0.4s ease;
 }
 
@@ -55,34 +46,26 @@
   display: flex;
   flex-direction: column;
   margin-left: 20px;
-  color: rgb(250, 250, 250);
-}
-
-.header_collapsible {
-  position: absolute;
   width: max-content;
   color: rgb(250, 250, 250);
-  right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.header_list {
+.Header_Container ul {
   display: flex;
   gap: 20px;
+  width: max-content;
   color: white;
   font-size: 20px;
 }
 
-.header_list li {
+ul li {
   font-family: "Times New Roman", Times, serif;
   position: relative;
   padding: 5px;
   display: inline-block;
 }
-
-.header_list li::after {
+/* ANIMATION */
+ul li::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -95,25 +78,26 @@
   transition: transform 0.25s ease-out;
 }
 
-.header_list li:hover {
+ul li:hover {
   cursor: pointer;
 }
 
-.header_list li:hover:after {
+ul li:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+/*  */
 
 @media only screen and (max-width: 700px) {
   .Header_Container {
-    height: 200px;
+    height: var(--header-height_phonescreen);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
   }
 
-  .Profile_Content {
+  /* .Profile_Content {
     flex-direction: column;
     text-align: center;
   }
@@ -129,5 +113,5 @@
 
   .header_collapsible {
     position: relative;
-  }
+  } */
 }
